@@ -9,7 +9,7 @@
       <div class="tagline">
           <h1><?php the_field('tagline'); ?></h1> 
       </div>
-      <div class="subtag">
+      <div class="subtag col-md-8">
           <h3><?php the_field('subtag'); ?></h3>
       </div>
 
@@ -32,8 +32,8 @@
 <div class = "col-md-4 offset-4 behopeful clearfix">
   <h2>Be Hopeful</h2>
 </div>
-<div class="container behopefulcontainer">
-  <div class="col-md-12">
+<div class="container">
+  <div class="behopefulcontainer col-md-12">
   <div class="containerflex behopefulcontent">
     <div class="contentbox">
     <?php 
@@ -101,17 +101,19 @@
 </div>
 
 
-<div class="container savingcontent col-md-10">
+<div class="container">
+  <div class="savingcontent col-md-12">
   <h2>Hopeful is the solution for nonprofits looking to store, analyze, and leverage their data for their future growth</h2>
   <?php 
 
-        $image = get_field('round_logo');
+        $image = get_field('round_logo_only');
 
         if( !empty($image) ): ?>
 
         <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
         <?php endif; ?>
+</div>
 </div>
 
 <div class="container">
@@ -142,7 +144,7 @@
   </div>
 </div>
 
-<h2 class="text-center teamheading">Our Team<hr></h2>
+<h2 class="text-center subheading">Our Team<hr></h2>
 
 <div class="container">
 <div class="containerflex col-md-12 ourteam">
@@ -197,7 +199,15 @@
 </div>
 </div>
 
+<h2 class="text-center subheading">Get In Touch<hr></h2>
+<div class="contactformlower containerflex">
+  <!-- <div class="bluebackground"> -->
+  <form id = "contactformlower">
+  <h5>Send us a message</h5>
+  <?php echo do_shortcode('[contact-form-7 id="204" title="Get In Touch"]'); ?>
+</div>
+</form>
+<!-- </div> -->
   
-<footer class = "clearfix">
+
 <?php get_footer(); ?>
-</footer>

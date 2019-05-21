@@ -1,8 +1,63 @@
 <footer>
-  <div class="container">
-    <p>&copy; Hopeful Inc. <?php echo date('Y'); ?></p>
-  </div>
+  <div class="containerflex">
+  	<div class="footerlogo">
+    	<?php 
+
+        $image = get_field('round_logo_only');
+
+        if( !empty($image) ): ?>
+
+        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+        <?php endif; ?>
+  	</div>
+    <div class="copyright">
+<p><p>&copy; Hopeful Inc. <?php echo date('Y'); ?></p></p>
+</div>
+<div class="socialmedia">
+       <?php 
+
+        $image = get_field('instagram_image');
+
+        if( !empty($image) ): ?>
+
+        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+        <?php endif; ?>
+
+        <?php 
+
+        $image = get_field('facebook_image');
+
+        if( !empty($image) ): ?>
+
+        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+        <?php endif; ?>
+
+        <?php 
+
+        $image = get_field('twitter_image');
+
+        if( !empty($image) ): ?>
+
+        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+        <?php endif; ?>
+
+        <?php 
+
+        $image = get_field('linkedin_image');
+
+        if( !empty($image) ): ?>
+
+        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+        <?php endif; ?>
+</div>
+</div>
 </footer>
+
 
 <script>
 // scripts.js, plugins.js and jquery are enqueued in functions.php

@@ -596,10 +596,10 @@ h3 {
 }
 
 .hero {
-    background-image: url('images/background.jpg');
-    background-size: cover;
+    /*background-image: url('images/background.jpg');*/
+    background: linear-gradient(to bottom, rgba(151,119,91,0.2) 1%, rgba(255,255,255,0.01)), 
+    url('images/background.jpg');
     height: 100vh;
-    width: 100vw;
     background-position-x: 70%;
     background-position-y: 68%;
 }
@@ -610,16 +610,29 @@ h3 {
 
 .subtag {
     margin-top: 20px;
+    padding:0;
 }
 
 .contactform {
     margin-top: 150px;
 }
 
+#wpcf7-f46-o1 > form > p:nth-child(2) > label > span > input {
+    border-radius: 5px;
+    border: none;
+    height: 40px;
+    background-color: rgba(255,255,255,0.45);
+    padding: 15px;
+}
+
+#wpcf7-f46-o1 > form > p:nth-child(2) > label > span > input::placeholder {
+    color:#FFF;
+}
+
 .behopeful {
     text-align: center;
     margin: 0 auto;
-    margin-top: 30px;
+    margin-top: 80px;
 }
 
 .behopeful h2 {
@@ -683,23 +696,12 @@ h3 {
     border-radius: 0 0 54px 0;
 }
 
-/*.flexbox {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  overflow: hidden;
-}
-
-.flexbox .contentbox {
-  flex: 1;
-}*/
-
 .savingcontent {
     background-image: linear-gradient(#D3E9FC, #FFF);
     margin: 0 auto;
     border-radius: 54px 54px 0 0;
     text-align: center;
-    margin-top: 70px;
+    margin-top: 160px;
     padding: 0;
 }
 
@@ -710,7 +712,7 @@ h3 {
 }
 
 .savingcontent img {
-    height: 250px;
+    width: 180px;
     margin-top: 20px;
 }
 
@@ -755,12 +757,12 @@ h3 {
     padding-top: 30px;
 }
 
-h2.teamheading {
-    margin-top: 50px;
+h2.subheading {
+    margin: 85px 0 30px 0;
     color:#008AFC;
 }
 
-.teamheading hr {
+.subheading hr {
     border: 1px solid #F2E205;
     width: 7%;
 }
@@ -814,36 +816,100 @@ body > div:nth-child(7) > div > div:nth-child(3) {
     border-radius: 0 54px 0 0;
 }
 
-
-/*.memberone {
-    border-radius: 54px 0 0 0;
+#contactformlower {
+    width: 50%;
+    box-shadow: 2px 2px 3px 0 rgba(0,0,0,.2);
+    border-top: 30px solid #0080E6;
+    border-left: 30px solid #0080E6;
+    border-radius: 54px 5px 54px 5px;
+    background: #fff;
+    padding: 35px;
 }
 
-.memberthree {
-    border-radius: 0 54px 0 0;
-}*/
 
-
-@media (max-width: 850px) {
-    .containerflex {
-    flex-direction: column; ;
-    }
-
-    .blueboxone,
-    .blueboxfour {
-    border-radius: 0;
-    margin: 0;
-    }
-    .bluebox {
-        margin: 10px;
-    }
-    .blueboxfour {
-        border-radius: 0 0 54px 54px;
-    }
-    body > div:nth-child(7) > div > div:nth-child(3) > div,
-    body > div:nth-child(7) > div > div:nth-child(3) {
-    border-radius: 0 0 0 0;
+#contactformlower h5 {
+    font-size: 21px;
+    font-weight: 700;
+    color: #008AFC;
+    margin-bottom: 20px;
 }
+
+#wpcf7-f204-o2 label,
+#wpcf7-f204-o2 > p:nth-child(5) > label > span > input {
+    font-size: 18px;
+    color: #008AFC;
+    width:100% !important; 
+}
+
+
+#wpcf7-f204-o2 input[type="text"],
+#wpcf7-f204-o2r input[type="tel"],
+#wpcf7-f204-o2r input[type="email"],
+#wpcf7-f204-o2 textarea,
+#wpcf7-f204-o2 > p:nth-child(5) > label > span > input
+ {
+    font-size: 14px;
+    width: 100%;
+}
+
+#wpcf7-f204-o2 input,
+#wpcf7-f204-o2 textarea,
+#wpcf7-f204-o2r input[type="email"] {
+    border: none;
+    border-bottom: 1px solid #D1D1D1;
+    margin-top: 10px;
+  /*  width: 150%;*/
+}
+
+#wpcf7-f204-o2 textarea {
+    height: 150px;
+}
+
+#wpcf7-f204-o2 input[type="submit"],
+#wpcf7-f46-o1 input[type="submit"] {
+    background-color: #008AFC;
+    color: #FFF;
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 2px 3px 0 rgba(0,0,0,.2);
+}
+
+
+footer {
+    background-color: #008AFC;
+    padding: 40px;
+    margin-top: 100px;
+}
+
+footer .containerflex {
+    align-items: center;
+}
+
+footer p {
+    text-align: center;
+    color: #FFF;
+    padding-right: 75px;
+}
+
+footer img {
+    width: 25px;
+    margin: 0 7px 0 7px;
+}
+
+.footerlogo img {
+    width: 75px;
+}
+
+/*Media Queries*/
+
+@media (max-width: 1220px) {
+    .subtag,
+    .contactform,
+    .hero h1,
+    .logoimage {
+        padding: 0 10px 0 10px;
+    }
 }
 
 @media (max-width: 1078px) {
@@ -869,13 +935,111 @@ body > div:nth-child(7) > div > div:nth-child(3) {
 
 @media (max-width: 870px) {
     .contentbox p {
-        min-height: 314px;
+        min-height: auto;
+        width: 50%;
+        margin: 0 auto;
     }
 }
 
 @media (max-width: 850px) {
+    .containerflex {
+    flex-direction: column; ;
+    }
+    
+    .contactformlower.containerflex {
+        flex-direction: row;
+    }
+
     .contentbox p {
         min-height: 175px;
         border-radius: 0;
     }
+
+    .behopefulcontent img {
+        width: 200px;
+    }
+
+    .blueboxone,
+    .blueboxfour {
+        border-radius: 0;
+        margin: 0;
+    }
+    .bluebox {
+        margin: 30px 0px 10px 0px;
+    }
+    .blueboxfour {
+        border-radius: 0 0 54px 54px;
+    }
+    body > div:nth-child(7) > div > div:nth-child(3) > div,
+    body > div:nth-child(7) > div > div:nth-child(3) {
+    border-radius: 0 0 0 0;
+    }
+    body > div:nth-child(7) > div > div:nth-child(1) > div {
+    border-radius: 54px 54px 0 0;
+    }
+    .teammember {
+        border-radius: 0 54px 0 0;
+    }
+    #contactformlower {
+        width: 75%;
+    }
+    footer p {
+    padding-right: 0;
+}
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 42px;
+    }
+    .hero h3 {
+        font-size: 19px;
+    }
+    }
+
+@media (max-width: 670px) {
+    .contactform {
+        margin-top: 125px;
+    }
+}
+
+@media (max-width: 560px) {
+    .contactform {
+        margin-top: 100px;
+    }
+    .logoimage img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 500px) {
+   .tagline {
+    margin-top: 75px;
+   }
+   .hero h1 {
+    font-size: 40px;
+   }
+   .hero h3 {
+    font-size: 17px;
+   }
+}
+
+@media (max-width: 400px) {
+    .logoimage img {
+        width: 125px;
+        height: 125px;
+    }
+   .tagline {
+    margin-top: 45px;
+   }
+   .hero h1 {
+    font-size: 28px;
+   }
+   .hero h3 {
+    font-size: 15px;
+   }
+   .contactform {
+    margin-top: 75px;
+   }
 }
